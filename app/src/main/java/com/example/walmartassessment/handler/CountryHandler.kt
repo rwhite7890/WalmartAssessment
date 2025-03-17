@@ -19,9 +19,9 @@ class CountryHandler {
         call.enqueue(object : Callback<List<CountryModel>> {
             override fun onResponse(call: Call<List<CountryModel>>, response: Response<List<CountryModel>>) {
                 if (response.isSuccessful) {
-                    val countryArray = response.body()
-                    if (countryArray != null) {
-                        resultListener.onSuccess(countryArray)
+                    val countryList = response.body()
+                    if (countryList != null) {
+                        resultListener.onSuccess(countryList)
                     } else {
                         resultListener.onFail("Something went wrong-->${response.code()}: ${response.message()}")
                     }
