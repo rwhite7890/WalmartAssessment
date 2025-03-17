@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val recyclerView: RecyclerView = findViewById(R.id.recycler_view)
+        val recyclerView: RecyclerView = binding.recyclerView
         val layoutManager = LinearLayoutManager(this)
 
         recyclerView.layoutManager = layoutManager
@@ -53,9 +53,6 @@ class MainActivity : AppCompatActivity() {
             }
 
             val adapter: CountryAdapter = recyclerView.adapter as CountryAdapter
-            adapter.saveData(response)
-
-
             adapter.saveData(response)
         }
 
