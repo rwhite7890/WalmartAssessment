@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
 
     private val resultListener = object : CountryHandler.ResultListener<List<CountryModel>>{
         override fun onSuccess(response: List<CountryModel>) {
-            val recyclerView: RecyclerView = findViewById(R.id.recycler_view)
+            val recyclerView: RecyclerView = binding.recyclerView
 
             if(recyclerView.adapter == null){
                 recyclerView.adapter = CountryAdapter()
