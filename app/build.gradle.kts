@@ -58,4 +58,5 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     testImplementation (libs.mockito.kotlin)
     testImplementation(kotlin("test"))
+    testImplementation("com.squareup.okhttp3:mockwebserver:4.12.0")
 }
