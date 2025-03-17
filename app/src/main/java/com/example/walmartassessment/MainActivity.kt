@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
 
         val countryHandler = CountryHandler()
-        countryHandler.getCountries(baseContext, resultListener)
+        countryHandler.getCountries(resultListener)
 
     }
 

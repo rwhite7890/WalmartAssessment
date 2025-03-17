@@ -14,7 +14,7 @@ class CountryHandler {
         fun onError(e: Throwable?)
     }
 
-    fun getCountries(context: Context, resultListener: ResultListener<List<CountryModel>>){
+    fun getCountries(resultListener: ResultListener<List<CountryModel>>){
         val call = ApiClient.countryService.getCountries()
         call.enqueue(object : Callback<List<CountryModel>> {
             override fun onResponse(call: Call<List<CountryModel>>, response: Response<List<CountryModel>>) {

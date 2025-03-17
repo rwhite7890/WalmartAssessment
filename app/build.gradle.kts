@@ -34,7 +34,7 @@ android {
         jvmTarget = "11"
     }
     buildFeatures {
-
+        buildConfig = true
         viewBinding = true
     }
 }
@@ -56,4 +56,6 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.ui.test.junit4)
+    testImplementation (libs.mockito.kotlin)
+    testImplementation(kotlin("test"))
 }
